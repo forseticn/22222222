@@ -17,7 +17,7 @@
 sed -i '$a src-git kenzo https://github.com/kenzok8/openwrt-packages' feeds.conf.default
 
 # passwall依赖
-src-git small https://github.com/kenzok8/small
+git clone https://github.com/kenzok8/small package/lean/small
 
 #安装New Argon
 rm -rf ./package/lean/luci-theme-argon
