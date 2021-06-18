@@ -14,10 +14,11 @@
 #sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
 
 # Add a feed source
-sed -i '$a src-git kenzo https://github.com/kenzok8/openwrt-packages' feeds.conf.default
+# sed -i '$a src-git kenzo https://github.com/kenzok8/openwrt-packages' feeds.conf.default
+
 
 # passwall依赖
-git clone https://github.com/kenzok8/small package/lean/small
+# git clone https://github.com/kenzok8/small package/lean/small
 
 #安装New Argon
 rm -rf ./package/lean/luci-theme-argon
@@ -26,3 +27,6 @@ git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/lea
 # 安装vssr
 git clone https://github.com/jerrykuku/lua-maxminddb.git package/lean/lua-maxminddb
 git clone https://github.com/jerrykuku/luci-app-vssr.git package/lean/luci-app-vssr
+
+git clone https://github.com/fw876/helloworld package/luci-app-ssr-plus
+/scripts/feeds update -a && ./scripts/feeds install -a
